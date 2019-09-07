@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
+# Technical_Interview Solution Authored by @ScottW.Davis(HvyD)
 
 
 from datetime import datetime, timedelta
@@ -16,24 +15,12 @@ appointments = [
 between = (datetime.strptime('2019-01-01 06:45:00', '%Y-%m-%d %H:%M:%S'), datetime.strptime('2019-01-01 07:00:00', '%Y-%m-%d %H:%M:%S'))
 
 
-def get_slots(between, appointments, duration=timedelta(hours = .25)):
+def find_opening(between, appointments, duration=timedelta(hours = .25)):
     slots = sorted([(between[0], between[0])] + appointments + [(between[1], between[1])])
     for start, end in ((slots[i][1], slots[i+1][0]) for i in range(len(slots)-1)):
         while start + duration <= end:
             print (start, start + duration)
             start += duration
 
-get_slots(between, appointments)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+find_opening(between, appointments)
 

@@ -5,6 +5,7 @@
 
 from datetime import datetime, timedelta
 
+
 appointments = [
     (datetime.strptime('2019-01-01 06:45:00', '%Y-%m-%d %H:%M:%S'), datetime.strptime('2019-01-01 07:00:00', '%Y-%m-%d %H:%M:%S')),
     (datetime.strptime('2019-01-01 01:00:00', '%Y-%m-%d %H:%M:%S'), datetime.strptime('2019-01-01 04:30:00', '%Y-%m-%d %H:%M:%S')),
